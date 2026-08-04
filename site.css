@@ -1,0 +1,314 @@
+:root {
+    --brand-teal: #153c4a;
+    --brand-teal-light: #1e5062;
+    --brand-teal-pale: #b2d6d8;
+    --brand-bg: #f4f6f7;
+    --text-dark: #1e1e1e;
+    --text-muted: #787878;
+    --danger: #c42b1c;
+    --success: #2e7d5c;
+    --border: #d2d2d2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--brand-bg);
+    color: var(--text-dark);
+}
+
+a {
+    color: inherit;
+}
+
+/* ===================== Login page ===================== */
+
+.login-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.login-brand {
+    flex: 0 0 360px;
+    background: var(--brand-teal);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-brand h1 {
+    font-size: 30px;
+    margin: 0 0 8px 0;
+}
+
+.login-brand p {
+    color: var(--brand-teal-pale);
+    font-size: 15px;
+    margin: 0;
+}
+
+.login-brand .footer-note {
+    margin-top: 220px;
+    font-size: 13px;
+    color: #8cb2b6;
+    line-height: 1.6;
+}
+
+.login-form-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-card h2 {
+    font-size: 26px;
+    margin: 0 0 6px 0;
+}
+
+.login-card .subheading {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 28px 0;
+}
+
+.field-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #646464;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.text-input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: var(--brand-teal-light);
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--brand-teal);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--brand-teal-light);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #e6ecec;
+    color: var(--brand-teal);
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.error-message {
+    color: var(--danger);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.version-tag {
+    margin-top: 32px;
+    font-size: 12px;
+    color: #b4b4b4;
+}
+
+/* ===================== Dashboard layout ===================== */
+
+.app-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    flex: 0 0 240px;
+    background: var(--brand-teal);
+    color: white;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .app-name {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 24px;
+    margin-bottom: 4px;
+}
+
+.sidebar .user-badge {
+    padding: 0 24px;
+    color: var(--brand-teal-pale);
+    font-size: 13px;
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
+
+.sidebar nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav a, .sidebar nav button.menu-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 13px 24px;
+    color: white;
+    text-decoration: none;
+    font-size: 14.5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.sidebar nav a:hover, .sidebar nav button.menu-link:hover {
+    background: var(--brand-teal-light);
+}
+
+.sidebar .logout-form {
+    padding: 0 24px;
+    margin-top: auto;
+}
+
+.btn-logout {
+    width: 100%;
+    padding: 10px;
+    background: #a02d2d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background: #b83636;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    background: white;
+    padding: 20px 32px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.topbar .role-tag {
+    color: var(--text-muted);
+    font-size: 13.5px;
+    margin-top: 4px;
+}
+
+.content-area {
+    flex: 1;
+    padding: 32px;
+}
+
+.placeholder-card {
+    background: white;
+    border-radius: 6px;
+    padding: 28px;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 640px;
+}
+
+/* ===================== Responsive (mobile) ===================== */
+
+@media (max-width: 720px) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+
+    .login-brand {
+        flex: none;
+        padding: 28px 24px;
+    }
+
+    .login-brand .footer-note {
+        display: none;
+    }
+
+    .app-shell {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: none;
+        padding: 16px 0;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .sidebar .logout-form {
+        margin-top: 12px;
+    }
+
+    .content-area {
+        padding: 20px;
+    }
+}
