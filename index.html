@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renew Crew - Staff Sign In</title>
+    <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-brand">
+            <h1>Renew Crew</h1>
+            <p>Workforce &amp; Payroll Management System</p>
+            <div class="footer-note">
+                Secretary &nbsp;&bull;&nbsp; Worker &nbsp;&bull;&nbsp; Manager &nbsp;&bull;&nbsp; CEO<br />
+                role-based access
+            </div>
+        </div>
+
+        <div class="login-form-panel">
+            <div class="login-card">
+                <h2>Welcome back</h2>
+                <p class="subheading">Sign in with the account provided by your manager or the CEO.</p>
+
+                <!-- Error message container (hidden by default, display via CSS/JS when needed) -->
+                <div class="error-message" id="errorMessage" style="display: none;">Invalid username or password.</div>
+
+                <form method="post" action="/login-handler">
+                    <label class="field-label" for="Username">Username</label>
+                    <input class="text-input" type="text" id="Username" name="Username"
+                           autofocus autocomplete="username" />
+
+                    <label class="field-label" for="Password">Password</label>
+                    <input class="text-input" type="password" id="Password" name="Password"
+                           autocomplete="current-password" />
+
+                    <button type="submit" class="btn-primary">SIGN IN</button>
+                </form>
+
+                <div class="version-tag">v1.0 &nbsp;&bull;&nbsp; Cleaning Company ERP (Web)</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
